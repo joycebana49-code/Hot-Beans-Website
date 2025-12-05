@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web - Tomorrow's Technology, Today</title>
+    <style>
+       
+        :root {
+            --dark-blue: #1A242F;
+            --light-blue: #20A4A0;
+            --text-color: #E0E6EB;
+            --heading-color: #FFFFFF;
+            --card-bg: #2F3E4C;
+        }
+
+        video{
+            width: 10em;
+            height: 10em;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- Header/Navigation --- */
+        .header {
+            background-color: var(--dark-blue);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--light-blue);
+        }
+
+        .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--heading-color);
+            text-decoration: none;
+        }
+
+        .nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 25px;
+            transition: color 0.3s;
+        }
+
+            .nav a.active {
+                color: var(--light-blue);
+                font-weight: bold;
+            }
+
+            .nav a:not(.contact-btn):hover {
+                color: var(--light-blue);
+            }
+
+        .contact-btn {
+            background-color: var(--light-blue);
+            color: var(--heading-color) !important;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 25px;
+            transition: background-color 0.3s;
+        }
+
+            .contact-btn:hover {
+                background-color: #1C8D8A;
+            }
+
+        /* --- Hero Section (Inspired by the large title in the CV image) --- */
+        .hero {
+            height: 60vh; /* Make it tall and impactful */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+            .hero h1 {
+                font-size: 80px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                color: var(--heading-color);
+                line-height: 1;
+            }
+
+                .hero h1 .accent {
+                    color: var(--light-blue);
+                }
+
+            .hero p {
+                font-size: 24px;
+                max-width: 700px;
+                margin-bottom: 30px;
+            }
+
+        .hero-cta {
+            background-color: var(--light-blue);
+            color: var(--heading-color);
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+            .hero-cta:hover {
+                background-color: #1C8D8A;
+            }
+
+        /* --- Feature Section --- */
+        .features-section {
+            padding: 80px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: var(--heading-color);
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--light-blue);
+            display: inline-block;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+            .feature-card h3 {
+                color: var(--light-blue);
+                font-size: 22px;
+                margin-top: 10px;
+            }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            border-top: 1px solid #3A4754;
+            font-size: 14px;
+        }
+
+        /* Basic Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .nav {
+                margin-top: 15px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .features-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">HOT BEANS</a>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="contact-btn">Contact</a>
+           
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>
+            Tomorrow's <span class="accent">Technology</span>
+        </h1>
+        <p>
+            We are a cutting-edge web development agency, building solutions that define the digital future for ambitious clients worldwide.
+        </p>
+        <a href="jobs.html" class="hero-cta">Browse Opportunities</a>
+    </section>
+    <section class="features-section">
+
+        <h2 class="section-title">What We Build</h2>
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3 style="color: #E0E6EB;">🖥️ Responsive Websites</h3>
+                <p>Delivering seamless experiences across all devices, from desktop monitors to mobile phones.</p>
+            </div>
+            <div class="feature-card">
+                <h3 style="color: #E0E6EB;">⚡ Full-Stack Applications</h3>
+                <p>Robust and scalable web applications engineered with modern backend and frontend technologies.</p>
+            </div>
+            <div class="feature-card">
+                <h3 style="color: #E0E6EB;">✨ UI/UX Design</h3>
+                <p>Creating intuitive, beautiful, and user-centric interfaces that drive engagement and satisfaction.</p>
+            </div>
+        </div>
+        <video src="vid.mp4">
+</section>
+    <footer>
+        &copy; 2025 Hot Beans Web. Empowering the next generation of web developers.
+    </footer>
+    </div>
+    </footer>
+
+</body>
+</html>

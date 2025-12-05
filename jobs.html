@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Opportunities - Hot Beans Web</title>
+    <style>
+        /* CSS inspired by the Hot Beans design */
+        :root {
+            --dark-blue: #1A242F;
+            --light-blue: #20A4A0;
+            --text-color: #E0E6EB;
+            --heading-color: #FFFFFF;
+            --card-bg: #2F3E4C;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header/Navigation */
+        .header {
+            background-color: var(--dark-blue);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--light-blue);
+        }
+
+        /* Logo acts as a link to the index page */
+        .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--heading-color);
+            text-decoration: none;
+        }
+
+        .nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 25px;
+            transition: color 0.3s;
+        }
+
+            /* Highlight the active page */
+            .nav a.active {
+                color: var(--light-blue);
+                font-weight: bold;
+            }
+
+            .nav a:not(.contact-btn):hover {
+                color: var(--light-blue);
+            }
+
+        .contact-btn {
+            background-color: var(--light-blue);
+            color: var(--heading-color) !important;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 25px;
+            transition: background-color 0.3s;
+        }
+
+            .contact-btn:hover {
+                background-color: #1C8D8A;
+            }
+
+        /* Hero/Introduction Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+            .hero h1 {
+                font-size: 48px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: var(--heading-color);
+            }
+
+            .hero .accent {
+                color: var(--light-blue);
+            }
+
+        /* Main Job Listings Container */
+        .job-listings-container {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: var(--heading-color);
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--light-blue);
+            display: inline-block;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+
+        .job-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Individual Job Card Styling */
+        .job-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--light-blue);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+            .job-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .job-card h3 {
+                color: var(--light-blue);
+                font-size: 24px;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+        .job-details {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #AAAAAA;
+        }
+
+        .apply-link {
+            display: inline-block;
+            background-color: var(--light-blue);
+            color: var(--heading-color);
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Basic Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+
+            .nav {
+                margin-top: 15px;
+            }
+
+            .job-listings-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">HOT BEANS</a>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="jobs.html" class="active">Jobs</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="contact-btn">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>
+            Find Your <span class="accent">Future</span>
+        </h1>
+        <p>
+            Explore our latest job openings and join the Hot Beans Web team. We are looking for innovators in design, development, and marketing.
+        </p>
+    </section>
+    <section class="job-listings-container">
+
+        <h2 class="section-title">Open Opportunities</h2>
+        <div class="job-grid">
+
+            <div class="job-card">
+                <h3>Front-End Developer</h3>
+                <div class="job-details">
+                    <span>Location: Remote/London</span>
+                    <span>Type: Full-Time</span>
+                </div>
+                <p>Seeking an expert in HTML5, CSS3, and modern JavaScript frameworks (React/Vue). Must have experience with responsive design and accessibility standards.</p>
+                <a href="apply.html?job=frontend" class="apply-link">Apply Now</a>
+            </div>
+            <div class="job-card">
+                <h3>Back-End Engineer (Node.js)</h3>
+                <div class="job-details">
+                    <span>Location: London HQ</span>
+                    <span>Type: Full-Time</span>
+                </div>
+                <p>Develop and maintain server-side logic using Node.js and Express. Experience with MongoDB or PostgreSQL and RESTful API creation is essential.</p>
+                <a href="apply.html?job=backend" class="apply-link">Apply Now</a>
+            </div>
+            <div class="job-card">
+                <h3>UX/UI Designer</h3>
+                <div class="job-details">
+                    <span>Location: Remote</span>
+                    <span>Type: Contract</span>
+                </div>
+                <p>Create intuitive and beautiful user interfaces. Requires proficiency in Figma/Sketch and a strong portfolio demonstrating user-centered design principles.</p>
+                <a href="apply.html?job=uxui" class="apply-link">Apply Now</a>
+            </div>
+            <div class="job-card">
+                <h3>Junior Developer Apprentice</h3>
+                <div class="job-details">
+                    <span>Location: Office/Remote Mix</span>
+                    <span>Type: Apprenticeship</span>
+                </div>
+                <p>An entry-level role for passionate learners. Mentorship provided. Basic understanding of web development fundamentals is required. Excellent opportunity to launch your career.</p>
+                <a href="apply.html?job=junior" class="apply-link">Apply Now</a>
+            </div>
+        </div>
+    </section>
+    <footer style="text-align: center; padding: 30px; margin-top: 50px; border-top: 1px solid #3A4754; font-size: 14px;">
+        &copy; 2025 Hot Beans Web. All Rights Reserved.
+    </footer>
+    </head>
+    <body>
+
+    </body>
+</html>

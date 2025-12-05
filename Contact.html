@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hot Beans Web</title>
+    <style>
+        /* CSS inspired by the Hot Beans design */
+        :root {
+            --dark-blue: #1A242F;
+            --light-blue: #20A4A0;
+            --text-color: #E0E6EB;
+            --heading-color: #FFFFFF;
+            --input-bg: #2F3E4C;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- Header/Navigation --- */
+        .header {
+            background-color: var(--dark-blue);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--light-blue);
+        }
+
+        .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--heading-color);
+            text-decoration: none;
+        }
+
+        .nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 25px;
+            transition: color 0.3s;
+        }
+
+            .nav a.active {
+                color: var(--light-blue);
+                font-weight: bold;
+            }
+
+            .nav a:not(.contact-btn):hover {
+                color: var(--light-blue);
+            }
+
+        .contact-btn {
+            background-color: var(--light-blue);
+            color: var(--heading-color) !important;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 25px;
+            transition: background-color 0.3s;
+        }
+
+            .contact-btn:hover {
+                background-color: #1C8D8A;
+            }
+
+        /* --- Hero Section --- */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+            .hero h1 {
+                font-size: 48px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: var(--heading-color);
+            }
+
+            .hero .accent {
+                color: var(--light-blue);
+            }
+
+        /* --- Contact Content/Form Section --- */
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info, .contact-form-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+            .contact-info h2, .contact-form-container h2 {
+                font-size: 32px;
+                color: var(--heading-color);
+                border-bottom: 2px solid var(--light-blue);
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+            }
+
+        .detail strong {
+            display: block;
+            color: var(--light-blue);
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        /* --- Form Styling --- */
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: var(--input-bg);
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .submit-btn {
+            background-color: var(--light-blue);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+            .submit-btn:hover {
+                background-color: #1C8D8A;
+            }
+
+        /* Basic Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                padding: 20px;
+            }
+        }
+    </style>
+    <script src="WorkForUs.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">HOT BEANS</a>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="about.html">About Us</a>
+            <a href="#" class="contact-btn active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>
+            Ready to <span class="accent">Connect?</span>
+        </h1>
+        <p>
+            Whether you're a talented developer or an innovative company, we're here to help you take the next step. Send us a message today.
+        </p>
+    </section>
+
+    <section class="contact-section">
+
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <div class="detail">
+                <strong>Email Us</strong>
+                <p><a href="mailto:talent@hotbeansweb.co.uk" style="color: #E0E6EB; text-decoration: none;">talent@hotbeansweb.co.uk</a></p>
+            </div>
+            <div class="detail">
+                <strong>Call Us</strong>
+                <p><a href="tel:+442012345678" style="color: #E0E6EB; text-decoration: none;">+44 20 1234 5678</a></p>
+            </div>
+            <div class="detail">
+                <strong>Our UK Office</strong>
+                <p>123 Tech Park, Digital City<br>London, SW1A 0AA</p>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <h2>Send Us a Message</h2>
+            <form action="submit-form-placeholder.html" method="GET" class="contact-form">
+                <form name="VacancyApplicationForm" action="ThankYou.html" method="get">
+
+                    <p>
+                        <label>* First Name:</label>
+                        <input type="text" id="fname" name="fname" />
+                        <br />
+                        <label id="fNameError" class="Error"></label>
+                    </p>
+                    <p>
+                        <label>* last Name:</label>
+                        <input type="text" id="sname" name="sname" />
+                        <br />
+                        <label id="sNameError" class="Error"></label>
+                    </p>
+                    <p>
+                        <label>* Are you a UK resident?</label>
+                        <input type="radio" id="ukResidentYes" name="ukResident" value="Yes"><label for="ukResidentYes">Yes</label>
+                        <input type="radio" id="ukResidentNo" name="ukResident" value="No"><label for="ukResidentNo">No</label>
+                        <br />
+                        <label id="ukResidentError" class="Error"></label>
+                    </p>
+                    <p>
+                        <label>* Please your telephone contact details</label>
+                        <input type="text" id="telNo" name="telNo" />
+                        <br />
+                        <label id="telNoError" class="Error"></label>
+                    </p>
+
+                    <p>
+                        <label>* please select the job you are applying for: </label>
+                        <select name="JobType" id="JobType">
+
+                       
+                            <option value="fullstack">UX/UI Designer</option>
+                            <option value="devops">Front-End Developer</option>
+                            <option value="qa">
+                                Junior Developer Apprentice<
+                                <div class="text-center py-12 px-4">
+
+                                    <button type="submit"
+                                   class="w-full py-3 px-6 border border-transparent rounded-lg shadow-xl text-lg font-semibold text-gray-900 bg-teal-400 hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-400 transition duration-150">
+                                      Submit Application
+                                    </button>
+
+
+</form>
+</div>
+    </section>
+</body>
+</html>
